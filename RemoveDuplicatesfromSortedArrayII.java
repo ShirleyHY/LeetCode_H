@@ -1,4 +1,4 @@
-public class Solution {
+/*public class Solution {
     public int removeDuplicates(int[] nums) {
         if (nums.length<3) return nums.length;
         if (nums.length==3){
@@ -20,4 +20,20 @@ public class Solution {
         }
         return count+1;
     }
-}
+}想得太复杂。搞来搞去总是有漏洞，还不如最开始最简单的想法
+*/
+
+public class Solution {
+    public int removeDuplicates(int[] nums) {
+        if (nums.length<3) return nums.length;
+        int count=1;
+        for(int i=2; i<nums.length; i++){
+            if(nums[i]==nums[count] && nums[i]==nums[count-1])  continue;
+            else{
+                count++;
+                nums[count]=nums[i];
+            }  
+        }
+        return count+1;
+    }
+}//最简单的想法。但是速度很慢
