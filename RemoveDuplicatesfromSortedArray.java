@@ -9,7 +9,7 @@
         return newnums;
     }
 }
-*/如果需要返回新数组
+如果需要返回新数组*/
 public class Solution {
     public int removeDuplicates(int[] nums) {
         int count=0;
