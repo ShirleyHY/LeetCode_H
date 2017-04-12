@@ -38,12 +38,13 @@ public class Solution {
     }
 }//最简单的想法。但是速度很慢
 
+
 public class Solution {
     public int removeDuplicates(int[] nums) {
     int i = 0;
-    for (int n : nums)
+    for (int n : nums) //相当于for (int n =0; n < nums.length; n++)
         if (i < 2 || n > nums[i-2])
             nums[i++] = n;
     return i;
     }
-}
+}//好好琢磨
